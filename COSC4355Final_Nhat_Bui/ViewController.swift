@@ -15,5 +15,10 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func makeOrder(_ sender: Any) {
+        let controller = storyboard?.instantiateViewController(identifier: "homeNavigationController") as! UINavigationController
+        controller.modalPresentationStyle = .fullScreen
+        present(controller, animated: true,completion: nil)
+    }
 }
 
